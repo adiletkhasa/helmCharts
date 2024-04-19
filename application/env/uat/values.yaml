@@ -6,11 +6,11 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt-dev
       acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
-    - host: qa-app.adilet-khasanov.net
+    - host: uat-app.adilet-khasanov.net
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
    - secretName: chart-example-tls
      hosts:
-       - qa-app.adilet-khasanov.net
+       - uat-app.adilet-khasanov.net
