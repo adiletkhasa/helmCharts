@@ -51,6 +51,10 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
       {{- with .Values.volumes }}
+        - name: redis
+          image: redis:6.0.9
+          ports:
+          - containerPort: 6379
       volumes:
         {{- toYaml . | nindent 8 }}
       {{- end }}
